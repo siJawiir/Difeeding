@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_header"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_side_background"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/fl_userImage"
+                    android:layout_width="@dimen/profile_imageSize"
+                    android:layout_height="@dimen/profile_imageSize"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_imageProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/profile_photoMargin"
+                        android:contentDescription="@string/content_description"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pasif_user" />
+
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/et_nama"
+                    android:layout_width="240dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Nama"
+                    android:background="@drawable/bg_main_input_fixxed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/fl_userImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="240dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_main_input_fixxed"
+                    android:enabled="false"
+                    android:hint="Email"
+                    app:layout_constraintStart_toStartOf="@+id/et_nama"
+                    app:layout_constraintTop_toBottomOf="@+id/et_nama" />
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et_phone"-->
+<!--                    android:layout_width="240dp"-->
+<!--                    android:layout_height="32dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:background="@drawable/bg_main_input_fixxed"-->
+<!--                    android:hint="Alamat"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/et_nama"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/et_email"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/et_email" />-->
+
+                <!--                <ImageView-->
+<!--                    android:id="@+id/iv_unverified"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/et_email"-->
+<!--                    app:layout_constraintEnd_toEndOf="@+id/et_nama"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/et_email"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/et_email"-->
+<!--                    app:srcCompat="@drawable/ic_unverified" />-->
+
+                <ImageView
+                    android:id="@+id/iv_verified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_email"
+                    app:layout_constraintStart_toEndOf="@+id/et_email"
+                    app:layout_constraintTop_toTopOf="@+id/et_email"
+                    app:srcCompat="@drawable/ic_verified" />
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simpan"
+                    app:layout_constraintEnd_toEndOf="@+id/et_email"
+                    app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+                <ImageView
+                    android:id="@+id/iv_logout"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fl_userImage"
+                    app:srcCompat="@drawable/ic_logout" />
+
+                <com.example.testingdifeeding.utils.diTextViewBold
+                    android:id="@+id/tv_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/logout"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_logout"
+                    app:layout_constraintStart_toEndOf="@+id/iv_logout"
+                    app:layout_constraintTop_toTopOf="@+id/iv_logout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="?android:attr/windowBackground"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/menu" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.testingdifeeding.utils.diTextViewBold
+                android:id="@+id/tv_dataTanggal"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <com.example.testingdifeeding.utils.diTextView-->
+<!--                android:id="@+id/tv_ketFCR"-->
+<!--                android:layout_width="140dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="FCR"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_dataTanggal"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_dataTanggal" />-->
+
+<!--            <com.example.testingdifeeding.utils.diTextView-->
+<!--                android:id="@+id/tv_dataFCR"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:text="TextView"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/tv_ketFCR"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/tv_ketFCR" />-->
+
+<!--            <com.example.testingdifeeding.utils.diTextView-->
+<!--                android:id="@+id/tv_satFCR"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:text="@string/persen"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/tv_dataFCR"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/tv_ketFCR" />-->
+
+<!--            <com.example.testingdifeeding.utils.diTextView-->
+<!--                android:id="@+id/tv_ketBiomas"-->
+<!--                android:layout_width="140dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="Total Biomas"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_ketFCR"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_ketFCR" />-->
+
+<!--            <com.example.testingdifeeding.utils.diTextView-->
+<!--                android:id="@+id/tv_dataBiomas"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:text="TextView"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/tv_ketBiomas"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/tv_ketBiomas" />-->
+
+<!--            <com.example.testingdifeeding.utils.diTextView-->
+<!--                android:id="@+id/tv_satBiomas"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:text="@string/kg"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/tv_dataBiomas"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/tv_ketBiomas" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_hasilInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/hasil_input"
+                android:textColor="@color/colorMain"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_jumlahTebar"
+                android:layout_width="171dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/jumlah_tebar_benih"
+                app:layout_constraintStart_toStartOf="@id/tv_hasilInput"
+                app:layout_constraintTop_toTopOf="@+id/tv_satuanJumlahTebar" />
+
+            <TextView
+                android:id="@+id/tv_satuanJumlahTebar"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/ekor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_hasilInput" />
+
+            <TextView
+                android:id="@+id/tv_datajumlahTebarHasil"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toStartOf="@+id/tv_satuanJumlahTebar"
+                app:layout_constraintTop_toTopOf="@+id/tv_satuanJumlahTebar" />
+
+            <TextView
+                android:id="@+id/tv_sizeBenih"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/size_benih"
+                app:layout_constraintEnd_toEndOf="@+id/tv_jumlahTebar"
+                app:layout_constraintStart_toStartOf="@+id/tv_jumlahTebar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_jumlahTebar" />
+
+            <TextView
+                android:id="@+id/tv_datasizeBenihHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datajumlahTebarHasil"
+                app:layout_constraintStart_toStartOf="@+id/tv_datajumlahTebarHasil"
+                app:layout_constraintTop_toTopOf="@+id/tv_satuanSizeBenih" />
+
+            <TextView
+                android:id="@+id/tv_satuanSizeBenih"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/ekor_kg"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanJumlahTebar"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanJumlahTebar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanJumlahTebar" />
+
+            <TextView
+                android:id="@+id/tv_sizePanen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/size_panen"
+                app:layout_constraintEnd_toEndOf="@+id/tv_sizeBenih"
+                app:layout_constraintStart_toStartOf="@+id/tv_sizeBenih"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sizeBenih" />
+
+            <TextView
+                android:id="@+id/tv_datasizePanenHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datasizeBenihHasil"
+                app:layout_constraintStart_toStartOf="@+id/tv_datasizeBenihHasil"
+                app:layout_constraintTop_toTopOf="@+id/tv_satuanSizePanen" />
+
+            <TextView
+                android:id="@+id/tv_satuanSizePanen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/ekor_kg"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanSizeBenih"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanSizeBenih"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanSizeBenih" />
+
+            <TextView
+                android:id="@+id/tv_lamaPelihara"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/lama_pemeliharaan"
+                app:layout_constraintEnd_toEndOf="@+id/tv_sizePanen"
+                app:layout_constraintStart_toStartOf="@+id/tv_sizePanen"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sizePanen" />
+
+            <TextView
+                android:id="@+id/tv_datalamaPeliharaHasil"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datasizePanenHasil"
+                app:layout_constraintStart_toStartOf="@+id/tv_datasizePanenHasil"
+                app:layout_constraintTop_toTopOf="@+id/tv_satuanLamaPelihara" />
+
+            <TextView
+                android:id="@+id/tv_satuanLamaPelihara"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/hari"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanSizePanen"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanSizePanen"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanSizePanen" />
+
+            <TextView
+                android:id="@+id/tv_tanggalTebar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/tanggal_tebar"
+                app:layout_constraintEnd_toEndOf="@+id/tv_lamaPelihara"
+                app:layout_constraintStart_toStartOf="@+id/tv_lamaPelihara"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lamaPelihara" />
+
+            <TextView
+                android:id="@+id/tv_datatanggalTebarHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datalamaPeliharaHasil"
+                app:layout_constraintStart_toStartOf="@+id/tv_datalamaPeliharaHasil"
+                app:layout_constraintTop_toTopOf="@+id/tv_satuanTanggalTebar" />
+
+            <TextView
+                android:id="@+id/tv_satuanTanggalTebar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanLamaPelihara"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanLamaPelihara"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanLamaPelihara" />
+
+            <TextView
+                android:id="@+id/tv_kelangsunganHidup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/kelangsungan_hidup"
+                app:layout_constraintEnd_toEndOf="@+id/tv_tanggalTebar"
+                app:layout_constraintStart_toStartOf="@+id/tv_tanggalTebar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanggalTebar" />
+
+            <TextView
+                android:id="@+id/tv_datakelangsunganHidupHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datalamaPeliharaHasil"
+                app:layout_constraintStart_toStartOf="@+id/tv_datatanggalTebarHasil"
+                app:layout_constraintTop_toTopOf="@+id/tv_satuanKelangsunganHidup" />
+
+            <TextView
+                android:id="@+id/tv_satuanKelangsunganHidup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/persen"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanTanggalTebar"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanTanggalTebar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanTanggalTebar" />
+
+            <TextView
+                android:id="@+id/tv_FRAwal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/feeding_rate_awal"
+                app:layout_constraintEnd_toEndOf="@+id/tv_kelangsunganHidup"
+                app:layout_constraintStart_toStartOf="@+id/tv_kelangsunganHidup"
+                app:layout_constraintTop_toBottomOf="@+id/tv_kelangsunganHidup" />
+
+            <TextView
+                android:id="@+id/tv_dataFRAwalHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+
+                app:layout_constraintEnd_toEndOf="@+id/tv_datakelangsunganHidupHasil"
+                app:layout_constraintStart_toStartOf="@+id/tv_datakelangsunganHidupHasil"
+                app:layout_constraintTop_toTopOf="@+id/tv_satuanFRAwal" />
+
+            <TextView
+                android:id="@+id/tv_satuanFRAwal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/persen"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanKelangsunganHidup"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanKelangsunganHidup"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanKelangsunganHidup" />
+
+            <TextView
+                android:id="@+id/tv_FRAkhir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/feeding_rate_akhir"
+                app:layout_constraintEnd_toEndOf="@+id/tv_FRAwal"
+                app:layout_constraintStart_toStartOf="@+id/tv_FRAwal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_FRAwal" />
+
+            <TextView
+                android:id="@+id/tv_dataFRAkhirHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_dataFRAwalHasil"
+                app:layout_constraintStart_toStartOf="@+id/tv_dataFRAwalHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanFRAkhir" />
+
+            <TextView
+                android:id="@+id/tv_satuanFRAkhir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/persen"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanFRAwal"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanFRAwal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanFRAwal" />
+
+            <TextView
+                android:id="@+id/tv_selisihFR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/selisih_feeding_rate"
+                app:layout_constraintEnd_toEndOf="@+id/tv_FRAkhir"
+                app:layout_constraintStart_toStartOf="@+id/tv_FRAkhir"
+                app:layout_constraintTop_toBottomOf="@+id/tv_FRAkhir" />
+
+            <TextView
+                android:id="@+id/tv_dataselisihFRHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_dataFRAkhirHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dataFRAkhirHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanSelisihFR" />
+
+            <TextView
+                android:id="@+id/tv_satuanSelisihFR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/persen"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanFRAkhir"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanFRAkhir"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanFRAkhir" />
+
+            <TextView
+                android:id="@+id/tv_hasilKalkulator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/hasil_perhitungan"
+                android:textColor="@color/colorMain"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanSelisihFR"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_hasilInput"
+                app:layout_constraintTop_toBottomOf="@+id/tv_selisihFR" />
+
+            <TextView
+                android:id="@+id/tv_rerataAwal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/rerata_bobot_awal"
+                app:layout_constraintEnd_toEndOf="@+id/tv_hasilKalkulator"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_selisihFR"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hasilKalkulator" />
+
+            <TextView
+                android:id="@+id/tv_datarerataAwalHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_dataselisihFRHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dataselisihFRHasil"
+                app:layout_constraintTop_toTopOf="@+id/tv_rerataAwal" />
+
+            <TextView
+                android:id="@+id/tv_satuanRerataAwal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/gram_ekor"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanSelisihFR"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanSelisihFR"
+                app:layout_constraintTop_toTopOf="@+id/tv_datarerataAwalHasil" />
+
+            <TextView
+                android:id="@+id/tv_biomasAwal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/biomas_awal"
+                app:layout_constraintEnd_toEndOf="@+id/tv_rerataAwal"
+                app:layout_constraintStart_toStartOf="@+id/tv_rerataAwal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rerataAwal" />
+
+            <TextView
+                android:id="@+id/tv_databiomasAwalHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datarerataAwalHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_datarerataAwalHasil"
+                app:layout_constraintTop_toTopOf="@+id/tv_biomasAwal" />
+
+            <TextView
+                android:id="@+id/tv_satuanBiomasAwal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/kg"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanRerataAwal"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanRerataAwal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanRerataAwal" />
+
+            <TextView
+                android:id="@+id/tv_rerataAkhir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/rerata_bobot_akhir"
+                app:layout_constraintEnd_toEndOf="@+id/tv_biomasAwal"
+                app:layout_constraintStart_toStartOf="@+id/tv_biomasAwal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_biomasAwal" />
+
+            <TextView
+                android:id="@+id/tv_datarerataAkhirHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_databiomasAwalHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_databiomasAwalHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanRerataAkhir" />
+
+            <TextView
+                android:id="@+id/tv_satuanRerataAkhir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/gram_ekor"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanBiomasAwal"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanBiomasAwal"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanBiomasAwal" />
+
+            <TextView
+                android:id="@+id/tv_biomasAkhir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/biomas_akhir"
+                app:layout_constraintEnd_toEndOf="@+id/tv_rerataAkhir"
+                app:layout_constraintStart_toStartOf="@+id/tv_rerataAkhir"
+                app:layout_constraintTop_toBottomOf="@+id/tv_rerataAkhir" />
+
+            <TextView
+                android:id="@+id/tv_databiomasAkhirHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datarerataAkhirHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_datarerataAkhirHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanBiomasAkhir" />
+
+            <TextView
+                android:id="@+id/tv_satuanBiomasAkhir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/kg"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanRerataAkhir"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanRerataAkhir"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanRerataAkhir" />
+
+            <TextView
+                android:id="@+id/tv_kebutuhanPakan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/total_kebutuhan_pakan"
+                app:layout_constraintEnd_toEndOf="@+id/tv_biomasAkhir"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_biomasAkhir"
+                app:layout_constraintTop_toBottomOf="@+id/tv_biomasAkhir" />
+
+            <TextView
+                android:id="@+id/tv_datakebutuhanPakanHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_databiomasAkhirHasil"
+                app:layout_constraintStart_toStartOf="@+id/tv_databiomasAkhirHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanKebutuhanPakan" />
+
+            <TextView
+                android:id="@+id/tv_satuanKebutuhanPakan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/kg"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanBiomasAkhir"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanBiomasAkhir"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanBiomasAkhir" />
+
+            <TextView
+                android:id="@+id/tv_FCR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/food_conversion_ratio"
+                app:layout_constraintEnd_toEndOf="@+id/tv_kebutuhanPakan"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_kebutuhanPakan"
+                app:layout_constraintTop_toBottomOf="@+id/tv_kebutuhanPakan" />
+
+            <TextView
+                android:id="@+id/tv_dataFCRHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datakebutuhanPakanHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_datakebutuhanPakanHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanFCR" />
+
+            <TextView
+                android:id="@+id/tv_satuanFCR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanKebutuhanPakan"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanKebutuhanPakan"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanKebutuhanPakan" />
+
+            <TextView
+                android:id="@+id/tv_lajuPertumbuhan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/laju_pertumbuhan_spesifik"
+                app:layout_constraintEnd_toEndOf="@+id/tv_FCR"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_FCR"
+                app:layout_constraintTop_toBottomOf="@+id/tv_FCR" />
+
+            <TextView
+                android:id="@+id/tv_datalajuPertumbuhanHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_dataFCRHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dataFCRHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanLajuPertumbuhan" />
+
+            <TextView
+                android:id="@+id/tv_satuanLajuPertumbuhan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/per_hari"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanFCR"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanFCR"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanFCR" />
+
+            <TextView
+                android:id="@+id/tv_kematian"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/total_kematian"
+                app:layout_constraintEnd_toEndOf="@+id/tv_lajuPertumbuhan"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_lajuPertumbuhan"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lajuPertumbuhan" />
+
+            <TextView
+                android:id="@+id/tv_datakematianHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datalajuPertumbuhanHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_datalajuPertumbuhanHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanKematian" />
+
+            <TextView
+                android:id="@+id/tv_satuanKematian"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/persen"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanLajuPertumbuhan"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanLajuPertumbuhan"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanLajuPertumbuhan" />
+
+            <TextView
+                android:id="@+id/tv_kematianHarian"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/kematian_harian"
+                app:layout_constraintEnd_toEndOf="@+id/tv_kematian"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_kematian"
+                app:layout_constraintTop_toBottomOf="@+id/tv_kematian" />
+
+            <TextView
+                android:id="@+id/tv_datakematianHarianHasil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="@+id/tv_datakematianHasil"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_datakematianHasil"
+                app:layout_constraintTop_toTopOf="@id/tv_satuanKematianHarian" />
+
+            <TextView
+                android:id="@+id/tv_satuanKematianHarian"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/per_hari"
+                app:layout_constraintEnd_toEndOf="@+id/tv_satuanKematian"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_satuanKematian"
+                app:layout_constraintTop_toBottomOf="@+id/tv_satuanKematian" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

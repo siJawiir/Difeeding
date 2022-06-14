@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "432715672571",
+    "project_id": "testingdifeeding",
+    "storage_bucket": "testingdifeeding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432715672571:android:bb9c049da76f979b5bb95e",
+        "android_client_info": {
+          "package_name": "com.example.testingdifeeding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432715672571-h4laanb2rslck1q63j1qqlptqp1k9nqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKjnvtecXJ5If4PALrXog8121npXVh_z0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432715672571-h4laanb2rslck1q63j1qqlptqp1k9nqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
